@@ -39,5 +39,35 @@ let result = prompt("");
 console.log(result.split(",").join("; "));
 arr.forEach((value, key, arr)=>{
      console.log(key+" має значення "+ value);
-})
+});
+const objNums = {
+   x: 1,
+   y: 9,
+   z: 8
+};
+function clone(mainObj){
+     let copy_obj = {};
+     let key;
+     for(key in mainObj){
+          copy_obj[key] = mainObj[key];
+     }
+     return copy_obj;
+}
+const newObj = clone(objNums);
+newObj.x = 12;
+console.log(newObj);
+console.log(objNums);
+const newNum = Object.assign({}, objNums);
+newNum.x = 25;
+console.log(newNum);
+console.log(objNums);
+const array = [1,2,3,44,5],
+      new_arr = [...array];
+console.log(new_arr);
 
+function print(a,b){
+     console.log(a);
+     console.log(b);
+}
+num = [1.2,3]
+print(...num);
